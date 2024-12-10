@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
+    <ProjectReference Include="..\SnakesAndLadders.Shared\SnakesAndLadders.Shared.csproj" />
   </ItemGroup>
 
 </Project>
