@@ -1,4 +1,6 @@
-﻿using SnakesAndLadders.Shared.Player;
+﻿using Microsoft.EntityFrameworkCore;
+using SnakesAndLadders.Shared.Move;
+using SnakesAndLadders.Shared.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,18 +24,39 @@ public class GameService
 
 		List<PlayerModel> playerList = new();
 
-		foreach(var player in requestModel.Players)
+		foreach (var player in requestModel.Players)
 		{
-			var foundPlayer = _db.Players.FirstOrDefault(x => x.Id == player.Id);
+			var foundPlayer = _db.Players.AsNoTracking().FirstOrDefault(x => x.Id == player.Id);
 
 			if (foundPlayer is null) continue;
 
 			playerList.Add(foundPlayer);
 		}
 
+		string gameId = Guid.NewGuid().ToString();
+
+		foreach (var player in playerList)
+		{
+			MoveModel moveModel = new()
+			{
+				Id = Guid.NewGuid().ToString(),
+				GameId = gameId,
+				PlayerId = player.Id,
+				FromCell = 1,
+				ToCell = 1,
+				MoveDate = DateTime.Now,
+			};
+			_db.Moves.Add(moveModel);
+
+			player.CurrentPosition = 1;
+			_db.Entry(player).State = EntityState.Modified;
+
+			_db.SaveChanges();
+		}
+
 		GameModel gameModel = new()
 		{
-			Id = Guid.NewGuid().ToString(),
+			Id = gameId,
 			Status = "InProgress",
 			CurrentPlayerId = playerList[0].Id,
 		};
