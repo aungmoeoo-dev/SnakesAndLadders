@@ -40,7 +40,7 @@ public class PlayerService
 
 		responseModel.IsSuccess = result > 0;
 		responseModel.Message = result > 0 ? "Saving Successful." : "Saving failed.";
-		responseModel.Data = requestModel;
+		responseModel.Data = result > 0 ? requestModel : null;
 		return responseModel;
 	}
 

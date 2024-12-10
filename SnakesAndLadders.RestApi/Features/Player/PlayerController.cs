@@ -25,7 +25,7 @@ public class PlayerController : ControllerBase
 
 			if (!responseModel.IsSuccess) return BadRequest(responseModel);
 
-			return Ok(responseModel);
+			return Created("", responseModel);
 		}
 		catch (Exception ex)
 		{
