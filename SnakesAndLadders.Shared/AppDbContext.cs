@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SnakesAndLadders.Shared.Cell;
 using SnakesAndLadders.Shared.Game;
 using SnakesAndLadders.Shared.Player;
 using System;
@@ -19,4 +20,5 @@ internal class AppDbContext : DbContext
 
 	public DbSet<PlayerModel> Players { get; set; }
 	public DbSet<GameModel> Games { get; set; }
+	public DbSet<CellModel> Cells { get; set; }
 }
