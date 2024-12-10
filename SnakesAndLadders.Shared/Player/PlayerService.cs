@@ -26,6 +26,14 @@ public class PlayerService
 			return responseModel;
 		}
 
+		var alreadyExistPlayer = _db.Players.FirstOrDefault(x => x.Name == requestModel.Name);
+		if (alreadyExistPlayer is not null)
+		{
+			responseModel.IsSuccess = false;
+			responseModel.Message = "Player already exists.";
+			return responseModel;
+		}
+
 		requestModel.Id = Guid.NewGuid().ToString();
 		_db.Players.Add(requestModel);
 		int result = _db.SaveChanges();
