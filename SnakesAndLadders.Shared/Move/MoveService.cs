@@ -67,21 +67,21 @@ public class MoveService
 		int oldPosition = player.CurrentPosition; ;
 		int newPosition = player.CurrentPosition + diceResult;
 
-		// This else statement is for testing Move.
+		//This else statement is for testing Move.
 		//if (requestModel.ToCell is 0)
 		//{
 		//	var diceResult = RollDice();
 		//	newPosition = player.CurrentPosition + diceResult;
 		//}
-
-		//else {
+		//else
+		//{
 		//	newPosition = requestModel.ToCell;
 		//}
 
 		#region Player go backward if the new positon is greater then 100
 		if (newPosition > 100)
 		{
-			newPosition = newPosition - 100;
+			newPosition = 100 - (newPosition - 100);
 		}
 		#endregion
 
@@ -97,7 +97,7 @@ public class MoveService
 		{
 			newPosition = (int)newCell.MoveToCell;
 		}
-		#endregion		
+		#endregion
 
 		player.CurrentPosition = newPosition;
 		_db.Entry(player).State = EntityState.Modified;
