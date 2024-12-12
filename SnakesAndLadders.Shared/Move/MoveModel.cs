@@ -20,3 +20,11 @@ public class MoveModel
 	public int ToCell { get; set; }
 	public DateTime MoveDate { get; set; }
 }
+
+public class MoveResponseModel
+{
+	public bool IsSuccess { get; set; }
+	public string Message { get; set; }
+	public bool IsPlayerWin { get; set; }
+	public MoveModel Data { get; set; }
+}
