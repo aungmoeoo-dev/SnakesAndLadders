@@ -5,7 +5,13 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakesAndLadders.RestApi", "SnakesAndLadders.RestApi\SnakesAndLadders.RestApi.csproj", "{3A4395DF-DA1C-4D2F-BC38-7E148B595003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.Shared", "SnakesAndLadders.Shared\SnakesAndLadders.Shared.csproj", "{55F2AB51-842C-4733-9A70-BE3ADAE08AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakesAndLadders.Shared", "SnakesAndLadders.Shared\SnakesAndLadders.Shared.csproj", "{55F2AB51-842C-4733-9A70-BE3ADAE08AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders2.RestApi", "SnakesAndLadders2.RestApi\SnakesAndLadders2.RestApi.csproj", "{48EF72B0-C095-485C-AE65-C818790C33CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders2.Shared", "SnakesAndLadders2.Shared\SnakesAndLadders2.Shared.csproj", "{27FC6F7F-7682-43AC-A658-747FEB6FDCD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders2.ConsoleApp", "SnakesAndLadders2.ConsoleApp\SnakesAndLadders2.ConsoleApp.csproj", "{BFC8EBE4-5ED1-4CCE-923E-C30290FA69C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{55F2AB51-842C-4733-9A70-BE3ADAE08AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55F2AB51-842C-4733-9A70-BE3ADAE08AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55F2AB51-842C-4733-9A70-BE3ADAE08AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EF72B0-C095-485C-AE65-C818790C33CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EF72B0-C095-485C-AE65-C818790C33CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EF72B0-C095-485C-AE65-C818790C33CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EF72B0-C095-485C-AE65-C818790C33CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FC6F7F-7682-43AC-A658-747FEB6FDCD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FC6F7F-7682-43AC-A658-747FEB6FDCD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FC6F7F-7682-43AC-A658-747FEB6FDCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FC6F7F-7682-43AC-A658-747FEB6FDCD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC8EBE4-5ED1-4CCE-923E-C30290FA69C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC8EBE4-5ED1-4CCE-923E-C30290FA69C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC8EBE4-5ED1-4CCE-923E-C30290FA69C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC8EBE4-5ED1-4CCE-923E-C30290FA69C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
